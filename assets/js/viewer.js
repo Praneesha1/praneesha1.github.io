@@ -326,7 +326,8 @@ export class CadViewer {
   _loop(now) {
     requestAnimationFrame(this._loop);
     const dt = Math.min(0.05, (now - this._last) / 1000); this._last = now;
-    if (!this.visibleInViewport || document.hidden) return;
+    if (document.hidden) return;
+    const onScreen = this.visibleInViewport && this.el.clientWidth > 0;
     if (this.playing && this.loaded && this.model.kinematics) {
       this.theta = (this.theta + dt * this.speed) % (this.model.motion?.period || Math.PI * 2);
       if (this.angleSlider && !this._scrubbing) this.angleSlider.value = ((this.theta / (Math.PI * 2)) * 360).toFixed(0);
@@ -341,6 +342,7 @@ export class CadViewer {
       this.controls.target.lerpVectors(a.tFrom, a.tTo, k);
       if (a.t >= 1) this._anim = null;
     }
+    if (!onScreen) return;
     this.controls.update();
     this._pick();
     this.renderer.render(this.scene, this.camera);
