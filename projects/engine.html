@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Four Cylinder Inline Engine · Gajadi Praneesha</title>
+<meta name="description" content="Four cylinder inline engine designed in Fusion 360. Rotate, explode, section, and run the engine in the browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='26' height='26' fill='none' stroke='%2316171A' stroke-width='3'/%3E%3Crect x='10' y='10' width='12' height='12' fill='%23E0521A'/%3E%3C/svg%3E">
+<script>(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<script type="importmap">{"imports":{"three":"../vendor/three/three.module.min.js"}}</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="../index.html"><span class="brand-mark"></span>G. Praneesha <small>Mechanical design</small></a>
+    <button class="nav-toggle" type="button" aria-label="Menu">Menu</button>
+    <nav class="nav-links">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#contact">Contact</a>
+      <a class="cta" href="../assets/Gajadi_Praneesha_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch theme"><i></i><span>Paper</span></button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+  <div class="proj-head">
+    <div class="crumbs"><a href="../index.html">Home</a><i></i><a href="../index.html#projects">Projects</a><i></i><span>DWG 01</span></div>
+    <h1 class="rv">Four cylinder inline engine</h1>
+    <div class="proj-meta rv rv-d1"><span class="chip">Fusion 360</span><span class="chip">26 parts</span><span class="chip">Assembly</span><span class="chip">Motion study</span><span class="chip">Drawing sheet</span><span class="chip">2026</span></div>
+  </div>
+
+  <div class="viewer-wrap rv rv-d2">
+    <div id="viewer"></div>
+  </div>
+  <div class="viewer-note">
+    <span>Press Play to turn the crank · Explode pulls the parts apart · Section cuts the model open</span>
+    <span>Model exported from Fusion 360 · 1.5 MB</span>
+  </div>
+
+  <div class="proj-grid">
+    <div class="prose">
+      <h2>Overview</h2>
+      <p>I built a four cylinder inline engine in Fusion 360. I modeled each part myself. The main parts are the engine block, the crankshaft, four pistons, four connecting rods, four rod caps, four piston pins, and eight pin clips. I put all the parts together in one assembly. I used joints so each part sits in the right place.</p>
+
+      <h2>How it moves</h2>
+      <p>The crankshaft has a revolute joint. The pistons slide inside the cylinders. When the crankshaft turns, the pistons move up and down. Pistons 1 and 4 move together. Pistons 2 and 3 move together, half a turn apart. This is the normal layout for an inline four.</p>
+      <p>The motion in the viewer above is not a recording. It is computed from the real geometry of the model. The crank radius, the rod length, and the cylinder spacing all come from the exported parts. The 2D drawing on the right runs from the same crank angle.</p>
+
+      <h2>Drawings and views</h2>
+      <p>I made front, top, left, right, and section views. I made an exploded view to show how the parts fit together. I made a drawing sheet with all the views on one page. The drawing sheet is at 1:50 scale. The material listed is steel.</p>
+
+      <h2>What I learned</h2>
+      <ul>
+        <li>Big assemblies need every part fully constrained. One loose joint breaks the whole motion.</li>
+        <li>Section views show problems that normal views hide.</li>
+        <li>Naming parts early saves a lot of time later.</li>
+      </ul>
+      <div class="note">Tip: open the Parts panel in the viewer and press "only" next to the crankshaft. Then press Play.</div>
+    </div>
+    <aside class="side-stack">
+      <div class="facts rv">
+        <div class="facts-head"><span>Measured from the model</span><span>mm</span></div>
+        <div id="facts"></div>
+      </div>
+      <div class="diagram rv rv-d1">
+        <div class="diagram-head"><span>Side view · one cylinder</span><span id="diag-angle">0°</span></div>
+        <svg id="diagram" role="img" aria-label="Crank and piston diagram"></svg>
+        <p class="cap">Orange is the crank. Black is the connecting rod. The box is the piston. It follows the same crank angle as the 3D model.</p>
+      </div>
+    </aside>
+  </div>
+
+  <section class="section" style="padding-top:0">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2>Gallery</h2>
+      <p>Views rendered in Fusion 360. The drawing sheet is the one I submitted with the model.</p>
+      <div class="dim"><i class="dim-l"></i><span>Sheet 1 · Views · Motion</span><i class="dim-r"></i></div>
+    </div>
+    <div class="gallery">
+      <figure class="wide rv"><img src="../assets/img/engine/drawing.jpg" alt="Engine drawing sheet with orthographic views and title block" loading="lazy"><figcaption><span>Drawing sheet</span><span>Scale 1:50</span></figcaption></figure>
+      <figure class="rv"><img src="../assets/img/engine/iso.jpg" alt="Isometric view" loading="lazy"><figcaption><span>Isometric</span></figcaption></figure>
+      <figure class="rv rv-d1"><img src="../assets/img/engine/front.jpg" alt="Front view" loading="lazy"><figcaption><span>Front</span></figcaption></figure>
+      <figure class="rv rv-d2"><img src="../assets/img/engine/top.jpg" alt="Top view" loading="lazy"><figcaption><span>Top</span></figcaption></figure>
+      <figure class="rv"><img src="../assets/img/engine/left.jpg" alt="Left side view" loading="lazy"><figcaption><span>Left side</span></figcaption></figure>
+      <figure class="rv rv-d1"><img src="../assets/img/engine/section.jpg" alt="Section view" loading="lazy"><figcaption><span>Section</span></figcaption></figure>
+      <figure class="rv rv-d2"><img src="../assets/img/engine/exploded.jpg" alt="Exploded view" loading="lazy"><figcaption><span>Exploded</span></figcaption></figure>
+    </div>
+    <figure class="video-box rv" style="margin:16px 0 0">
+      <video controls preload="none" playsinline poster="../assets/img/engine/iso.jpg" src="../assets/video/engine.mp4"></video>
+      <figcaption>Motion study recorded in Fusion 360</figcaption>
+    </figure>
+  </section>
+
+  <div class="next-proj">
+    <span class="mono">Next drawing</span>
+    <a href="ornithopter.html">Ornithopter flapping wing mechanism <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+  </div>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <span>Drawn by Gajadi Praneesha · Rev A · <span data-year>2026</span></span>
+    <span>Models exported from Fusion 360 · Viewer built with three.js</span>
+    <a href="../index.html">Home</a>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script type="module">
+  import { CadViewer, LinkageDiagram } from '../assets/js/viewer.js';
+  import { ENGINE } from '../assets/js/models.js';
+  const el = document.getElementById('viewer');
+  const v = window.cadViewer = new CadViewer(el, { model: ENGINE, base: '../', playing: false });
+  const f = document.getElementById('facts');
+  for (const [k, val] of ENGINE.facts) { const r = document.createElement('div'); r.className = 'row'; r.innerHTML = `<span class="k">${k}</span><span class="v">${val}</span>`; f.appendChild(r); }
+  new LinkageDiagram(document.getElementById('diagram'), ENGINE, v);
+  const out = document.getElementById('diag-angle');
+  v.onTick((t) => { out.textContent = ((t / (Math.PI * 2)) * 360).toFixed(0) + '°'; });
+</script>
+</body>
+</html>

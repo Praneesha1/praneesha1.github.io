@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Ornithopter Flapping Wing Mechanism · Gajadi Praneesha</title>
+<meta name="description" content="Ornithopter designed in Fusion 360. A crank and two links flap both wings. Rotate, explode, section, and run it in the browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='26' height='26' fill='none' stroke='%2316171A' stroke-width='3'/%3E%3Crect x='10' y='10' width='12' height='12' fill='%23E0521A'/%3E%3C/svg%3E">
+<script>(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<script type="importmap">{"imports":{"three":"../vendor/three/three.module.min.js"}}</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="../index.html"><span class="brand-mark"></span>G. Praneesha <small>Mechanical design</small></a>
+    <button class="nav-toggle" type="button" aria-label="Menu">Menu</button>
+    <nav class="nav-links">
+      <a href="../index.html#projects">Projects</a>
+      <a href="../index.html#skills">Skills</a>
+      <a href="../index.html#experience">Experience</a>
+      <a href="../index.html#contact">Contact</a>
+      <a class="cta" href="../assets/Gajadi_Praneesha_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch theme"><i></i><span>Paper</span></button>
+    </nav>
+  </div>
+</header>
+
+<main>
+<div class="wrap">
+  <div class="proj-head">
+    <div class="crumbs"><a href="../index.html">Home</a><i></i><a href="../index.html#projects">Projects</a><i></i><span>DWG 02</span></div>
+    <h1 class="rv">Ornithopter flapping wing mechanism</h1>
+    <div class="proj-meta rv rv-d1"><span class="chip">Fusion 360</span><span class="chip">12 parts</span><span class="chip">Linkage</span><span class="chip">Motion study</span><span class="chip">Biomimetic</span><span class="chip">2026</span></div>
+  </div>
+
+  <div class="viewer-wrap rv rv-d2">
+    <div id="viewer"></div>
+  </div>
+  <div class="viewer-note">
+    <span>Press Play to turn the crank · Explode pulls the parts apart · Section cuts the model open</span>
+    <span>Model exported from Fusion 360 · 0.4 MB</span>
+  </div>
+
+  <div class="proj-grid">
+    <div class="prose">
+      <h2>Overview</h2>
+      <p>An ornithopter flies by flapping its wings like a bird. I built one in Fusion 360. The model has 12 parts. It has a frame, a shaft, a crank, two links, two wing roots, two wings, and a tail.</p>
+
+      <h2>How it moves</h2>
+      <p>The crank turns on the shaft at the front. One pin on the crank drives two links. Each link pushes a wing root. The wing root turns on a hinge at the top of the frame. So when the crank goes round, both wings go up and down together.</p>
+      <p>I built the left wing first. Then I mirrored it to make the right wing. I used revolute joints where parts need to rotate. I used rigid joints where parts must stay fixed. The motion in the viewer is computed from the crank radius, the link length, and the hinge position measured in the model. It is the same four bar linkage drawn on the right.</p>
+
+      <h2>What I learned</h2>
+      <ul>
+        <li>A small change in link length changes the whole wing path.</li>
+        <li>Mirroring an assembly is not the same as copying it. The joints must be mirrored too.</li>
+        <li>One crank pin driving two links keeps both wings in step with no gears.</li>
+      </ul>
+      <div class="note">Tip: set the Section axis to X and slide it to about half way. You can see the crank pin and both links from inside the frame.</div>
+    </div>
+    <aside class="side-stack">
+      <div class="facts rv">
+        <div class="facts-head"><span>Measured from the model</span><span>in</span></div>
+        <div id="facts"></div>
+      </div>
+      <div class="diagram orni rv rv-d1">
+        <div class="diagram-head"><span>Front view · linkage</span><span id="diag-angle">0°</span></div>
+        <svg id="diagram" role="img" aria-label="Crank and wing linkage diagram"></svg>
+        <p class="cap">Orange is the crank and the wing levers. Black is the two links. The dashed lines are the wing spars. It follows the same crank angle as the 3D model.</p>
+      </div>
+    </aside>
+  </div>
+
+  <section class="section" style="padding-top:0">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <h2>Gallery</h2>
+      <p>Views rendered in Fusion 360 and the motion study video.</p>
+      <div class="dim"><i class="dim-l"></i><span>Views · Motion</span><i class="dim-r"></i></div>
+    </div>
+    <div class="gallery">
+      <figure class="dark rv"><img src="../assets/img/ornithopter/assembly.png" alt="Assembly view" loading="lazy"><figcaption><span>Assembly</span></figcaption></figure>
+      <figure class="dark rv rv-d1"><img src="../assets/img/ornithopter/top.png" alt="Top view" loading="lazy"><figcaption><span>Top</span></figcaption></figure>
+      <figure class="dark rv rv-d2"><img src="../assets/img/ornithopter/front.png" alt="Front view" loading="lazy"><figcaption><span>Front</span></figcaption></figure>
+    </div>
+    <figure class="video-box rv" style="margin:16px 0 0">
+      <video controls preload="none" playsinline loop poster="../assets/img/ornithopter/assembly.png" src="../assets/video/ornithopter.mp4"></video>
+      <figcaption>Motion study recorded in Fusion 360</figcaption>
+    </figure>
+  </section>
+
+  <div class="next-proj">
+    <span class="mono">Next drawing</span>
+    <a href="components.html">Mechanical components and assemblies <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+  </div>
+</div>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <span>Drawn by Gajadi Praneesha · Rev A · <span data-year>2026</span></span>
+    <span>Models exported from Fusion 360 · Viewer built with three.js</span>
+    <a href="../index.html">Home</a>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
+<script type="module">
+  import { CadViewer, LinkageDiagram } from '../assets/js/viewer.js';
+  import { ORNITHOPTER } from '../assets/js/models.js';
+  const el = document.getElementById('viewer');
+  const v = window.cadViewer = new CadViewer(el, { model: ORNITHOPTER, base: '../', playing: true });
+  const f = document.getElementById('facts');
+  for (const [k, val] of ORNITHOPTER.facts) { const r = document.createElement('div'); r.className = 'row'; r.innerHTML = `<span class="k">${k}</span><span class="v">${val}</span>`; f.appendChild(r); }
+  new LinkageDiagram(document.getElementById('diagram'), ORNITHOPTER, v);
+  const out = document.getElementById('diag-angle');
+  v.onTick((t) => { out.textContent = ((t / (Math.PI * 2)) * 360).toFixed(0) + '°'; });
+</script>
+</body>
+</html>
