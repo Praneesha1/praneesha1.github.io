@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gajadi Praneesha · Mechanical Design Portfolio</title>
+<meta name="description" content="Mechanical Engineering student at IIT Jodhpur. CAD models, assemblies, and motion studies in Fusion 360. Every project opens in a 3D viewer in the browser.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;500;600;700&family=Barlow:wght@400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect x='3' y='3' width='26' height='26' fill='none' stroke='%2316171A' stroke-width='3'/%3E%3Crect x='10' y='10' width='12' height='12' fill='%23E0521A'/%3E%3C/svg%3E">
+<script>(function(){try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.setAttribute('data-theme',t);}catch(e){}})();</script>
+<script type="importmap">{"imports":{"three":"./vendor/three/three.module.min.js"}}</script>
+</head>
+<body>
+
+<header class="nav">
+  <div class="wrap nav-in">
+    <a class="brand" href="#home"><span class="brand-mark"></span>G. Praneesha <small>Mechanical design</small></a>
+    <button class="nav-toggle" type="button" aria-label="Menu">Menu</button>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#about">About me</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+      <a class="cta" href="assets/Gajadi_Praneesha_Resume.pdf" target="_blank" rel="noopener">Resume</a>
+      <button class="theme-btn" type="button" data-theme-toggle aria-label="Switch theme"><i></i><span>Paper</span></button>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+
+<!-- ============================================================ HOME -->
+<section class="view hero" id="home">
+  <div class="zones"><span>1</span><span>2</span><span>3</span><span>4</span><span>5</span><span>6</span><span>7</span><span>8</span></div>
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <div>
+        <span class="eyebrow rv">Mechanical Engineering · IIT Jodhpur · 2024 to 2028</span>
+        <h1 class="rv rv-d1">Gajadi<br><span class="thin">Praneesha</span></h1>
+        <p class="lede rv rv-d2">I am a third year Mechanical Engineering student at IIT Jodhpur. I model parts and assemblies in Fusion 360 and make them move. Every project here opens in a 3D viewer. You can rotate it, take it apart, and run the mechanism.</p>
+        <div class="hero-actions rv rv-d3">
+          <a class="btn primary" href="#projects">View projects <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+          <a class="btn" href="#about">About me</a>
+          <a class="btn" href="assets/Gajadi_Praneesha_Resume.pdf" target="_blank" rel="noopener">Resume PDF</a>
+        </div>
+      </div>
+      <div class="title-block rv rv-d4" aria-label="Title block">
+        <div class="span2"><span class="k">Title</span><span class="v">Mechanical design portfolio</span></div>
+        <div><span class="k">Drawn by</span><span class="v">G. Praneesha</span></div>
+        <div><span class="k">Rev</span><span class="v">A</span></div>
+        <div><span class="k">Institute</span><span class="v">IIT Jodhpur</span></div>
+        <div><span class="k">Location</span><span class="v">Hyderabad</span></div>
+        <div><span class="k">Software</span><span class="v">Fusion 360</span></div>
+        <div><span class="k">Sheet</span><span class="v">1 of 5</span></div>
+      </div>
+    </div>
+    <div class="hero-viewer rv rv-d2">
+      <div class="corner tl"><b>Ornithopter</b> · live model</div>
+      <div class="corner tr">12 parts · crank driven wings</div>
+      <div class="corner bl">Drag to rotate</div>
+      <div class="corner br"><a href="projects/ornithopter.html">Open full viewer</a></div>
+      <div id="hero-viewer"></div>
+    </div>
+  </div>
+  <div class="wrap home-strip">
+    <a class="strip-item rv" href="#about"><span class="mono">01</span><h3>About me</h3><p>Who I am and where I have been.</p></a>
+    <a class="strip-item rv rv-d1" href="#skills"><span class="mono">02</span><h3>Skills</h3><p>Tools I use and how I work.</p></a>
+    <a class="strip-item rv rv-d2" href="#projects"><span class="mono">03</span><h3>Projects</h3><p>Three models you can run in the browser.</p></a>
+    <a class="strip-item rv rv-d3" href="#contact"><span class="mono">04</span><h3>Contact</h3><p>Email, LinkedIn, GitHub.</p></a>
+  </div>
+</section>
+
+<!-- =========================================================== ABOUT -->
+<section class="view section" id="about" hidden>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">01</span>
+      <h2>About me</h2>
+      <p>Who I am, what I work with, and where I have been.</p>
+      <div class="dim"><i class="dim-l"></i><span>Sheet 2 of 5 · Profile</span><i class="dim-r"></i></div>
+    </div>
+    <div class="about">
+      <div class="about-text rv">
+        <p>I am Gajadi Praneesha. I study Mechanical Engineering at IIT Jodhpur. I am in my third year. I like to design things that move.</p>
+        <p>My main tool is Fusion 360. I model each part, join the parts into an assembly, and check the motion. Then I make drawings so the part can be made. I also know SolidWorks, AutoCAD, and ANSYS Workbench.</p>
+        <p>On this site every model is real. The engine and the ornithopter are the same files I built in Fusion 360. You can turn them, pull them apart, cut them open, and run the mechanism in your browser.</p>
+        <p>Outside class I help run campus events and mentor first year students. I am from Hyderabad.</p>
+        <div class="hero-actions" style="margin-top:8px">
+          <a class="btn primary" href="#projects">See my projects <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+          <a class="btn" href="assets/Gajadi_Praneesha_Resume.pdf" target="_blank" rel="noopener">Resume PDF</a>
+        </div>
+      </div>
+      <div class="glance rv rv-d1">
+        <div class="glance-head"><span>At a glance</span><span>2026</span></div>
+        <div class="row"><span class="k">Year</span><span class="v">Third year, B.Tech Mechanical Engineering</span></div>
+        <div class="row"><span class="k">Institute</span><span class="v">Indian Institute of Technology Jodhpur</span></div>
+        <div class="row"><span class="k">Main tool</span><span class="v">Fusion 360</span></div>
+        <div class="row"><span class="k">Also</span><span class="v">SolidWorks, AutoCAD, ANSYS Workbench</span></div>
+        <div class="row"><span class="k">Focus</span><span class="v">CAD modelling, assemblies, motion, drawings</span></div>
+        <div class="row"><span class="k">Home</span><span class="v">Hyderabad, Telangana</span></div>
+        <div class="row"><span class="k">Open to</span><span class="v">Internships and design projects</span></div>
+      </div>
+    </div>
+
+    <div class="about-sub">
+      <div class="sub-head rv"><h3>Experience and education</h3><span>2020 to present</span></div>
+      <div class="timeline">
+        <div class="tl-col rv">
+          <h3>Positions <span>IIT Jodhpur</span></h3>
+          <div class="tl-item"><div class="tl-date">Aug 2025<br>to present</div><div><h4>Support Team Member</h4><div class="org">Nexus IIT Jodhpur</div></div></div>
+          <div class="tl-item"><div class="tl-date">Oct 2024<br>to present</div><div><h4>Core Member</h4><div class="org">E-Cell IIT Jodhpur</div><p>Joined the support team in October 2024. Moved to the core team in August 2025.</p></div></div>
+          <div class="tl-item"><div class="tl-date">Aug 2025<br>to Feb 2026</div><div><h4>Student Guide</h4><div class="org">Student Wellbeing Committee</div><p>Mentored 11 first year students. Helped them settle into classes and campus life.</p></div></div>
+          <div class="tl-item"><div class="tl-date">Dec 2024<br>to Jan 2026</div><div><h4>Assistant Head</h4><div class="org">Prometeo IIT Jodhpur</div><p>Ran publicity and outreach for the annual technical festival. Started as a volunteer in 2024.</p></div></div>
+          <div class="tl-item"><div class="tl-date">Two editions</div><div><h4>Participant and Mentor</h4><div class="org">Vandre IIT Jodhpur</div><p>Helped build an interactive stall that won an award. Mentored student teams the next year.</p></div></div>
+        </div>
+        <div class="tl-col rv rv-d1">
+          <h3>Education <span>Degrees and schools</span></h3>
+          <div class="tl-item"><div class="tl-date">2024 to 2028</div><div><h4>B.Tech, Mechanical Engineering</h4><div class="org">Indian Institute of Technology Jodhpur</div><p>Third year. Coursework in solids, fluids, thermodynamics, manufacturing, metrology, and computation.</p></div></div>
+          <div class="tl-item"><div class="tl-date">2022</div><div><h4>Class XII, MPC</h4><div class="org">Little Flower Junior College, Uppal</div><div class="grade">96%</div></div></div>
+          <div class="tl-item"><div class="tl-date">2020</div><div><h4>Class X</h4><div class="org">St. Peter's Model School</div><div class="grade">94%</div></div></div>
+        </div>
+      </div>
+    </div>
+    <div class="view-next"><span class="mono">Next sheet</span><a href="#skills">Skills <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div>
+  </div>
+</section>
+
+<!-- ========================================================== SKILLS -->
+<section class="view section" id="skills" hidden>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">02</span>
+      <h2>Skills</h2>
+      <p>What I use and what I know. Fusion 360 is my main tool. I also work in SolidWorks and AutoCAD, and I have used ANSYS Workbench for analysis.</p>
+      <div class="dim"><i class="dim-l"></i><span>Sheet 3 of 5 · Tools · Design · Coursework</span><i class="dim-r"></i></div>
+    </div>
+    <div class="skills">
+      <div class="skill-box rv">
+        <h3>Software <span>CAD and CAE</span></h3>
+        <div class="skill-list"><span class="skill main">Fusion 360</span><span class="skill">SolidWorks</span><span class="skill">AutoCAD</span><span class="skill">ANSYS Workbench</span><span class="skill">GitHub</span></div>
+      </div>
+      <div class="skill-box rv rv-d1">
+        <h3>Design <span>What I do with it</span></h3>
+        <div class="skill-list"><span class="skill main">3D CAD modelling</span><span class="skill main">Assembly design</span><span class="skill">Engineering drawing</span><span class="skill">Motion simulation</span><span class="skill">Mechanical design</span><span class="skill">Machine elements</span><span class="skill">GD&amp;T</span></div>
+      </div>
+      <div class="skill-box rv rv-d2">
+        <h3>Coursework <span>IIT Jodhpur</span></h3>
+        <div class="skill-list"><span class="skill">Mechanics of Solids</span><span class="skill">Fluid Mechanics</span><span class="skill">Thermodynamics</span><span class="skill">Manufacturing Processes</span><span class="skill">Engineering Mechanics</span><span class="skill">Metrology</span><span class="skill">Scientific Computations</span><span class="skill">Machine Learning</span></div>
+      </div>
+    </div>
+
+    <div class="about-sub">
+      <div class="sub-head rv"><h3>How I work</h3><span>From sketch to drawing</span></div>
+      <div class="process">
+        <div class="step rv"><span class="mono">Step 1</span><h4>Model the parts</h4><p>Each part gets its own file. I keep the sketches simple and fully defined so changes are easy later.</p></div>
+        <div class="step rv rv-d1"><span class="mono">Step 2</span><h4>Build the assembly</h4><p>I join the parts with the right joints. Revolute where things turn. Slider where things slide. Rigid where things stay put.</p></div>
+        <div class="step rv rv-d2"><span class="mono">Step 3</span><h4>Check the motion</h4><p>I run a motion study. If a part hits another part, I go back and fix the geometry.</p></div>
+        <div class="step rv rv-d3"><span class="mono">Step 4</span><h4>Make the drawings</h4><p>Front, top, side, section, and exploded views on a sheet with a title block. Ready for a workshop.</p></div>
+      </div>
+    </div>
+
+    <div class="about-sub">
+      <div class="sub-head rv"><h3>Where I used them</h3><span>Skills to projects</span></div>
+      <div class="usage rv">
+        <div class="usage-row"><span class="skill">Assembly joints</span><span class="u">Engine (26 parts), Ornithopter (12 parts), Hinge</span></div>
+        <div class="usage-row"><span class="skill">Motion study</span><span class="u">Engine crank and pistons, Ornithopter wings, Hinge</span></div>
+        <div class="usage-row"><span class="skill">Engineering drawing</span><span class="u">Engine drawing sheet, exploded and section views</span></div>
+        <div class="usage-row"><span class="skill">Loft and Sweep</span><span class="u">Wall hook, Pipe elbow, Flanged elbow</span></div>
+        <div class="usage-row"><span class="skill">Mirror and patterns</span><span class="u">Ornithopter left and right wings, Engine cylinders</span></div>
+      </div>
+    </div>
+    <div class="view-next"><span class="mono">Next sheet</span><a href="#projects">Projects <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div>
+  </div>
+</section>
+
+<!-- ======================================================== PROJECTS -->
+<section class="view section" id="projects" hidden>
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="sec-num">03</span>
+      <h2>Projects</h2>
+      <p>Three projects from Fusion 360. Two of them open in a full 3D viewer with explode, section cut, and motion. The third is a set of parts with pictures and a short video.</p>
+      <div class="dim"><i class="dim-l"></i><span>Sheet 4 of 5 · Drawings 01 to 03</span><i class="dim-r"></i></div>
+    </div>
+    <div class="projects">
+      <article class="card rv">
+        <div class="card-media light"><img src="assets/img/engine/iso.jpg" alt="Four cylinder engine CAD model" loading="lazy"><span class="tag">DWG 01</span><span class="tag motion">Motion</span></div>
+        <div class="card-body">
+          <h3>Four cylinder inline engine</h3>
+          <p>A full engine built from scratch. Block, crankshaft, pistons, rods, caps, and pins. All joined into one assembly that runs.</p>
+          <div class="chips"><span class="chip">Fusion 360</span><span class="chip">26 parts</span><span class="chip">Drawings</span><span class="chip">Motion study</span></div>
+          <div class="card-foot"><span>Explode · Section · Run</span><span class="go">Open viewer <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></div>
+        </div>
+        <a class="cover" href="projects/engine.html" aria-label="Open the engine project"></a>
+      </article>
+      <article class="card rv rv-d1">
+        <div class="card-media"><img src="assets/img/ornithopter/assembly.png" alt="Ornithopter CAD model" loading="lazy"><span class="tag">DWG 02</span><span class="tag motion">Motion</span></div>
+        <div class="card-body">
+          <h3>Ornithopter flapping wing mechanism</h3>
+          <p>A machine that flies by flapping its wings like a bird. One crank, two links, two wings. Both wings move together.</p>
+          <div class="chips"><span class="chip">Fusion 360</span><span class="chip">12 parts</span><span class="chip">Linkage</span><span class="chip">Motion study</span></div>
+          <div class="card-foot"><span>Explode · Section · Run</span><span class="go">Open viewer <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></div>
+        </div>
+        <a class="cover" href="projects/ornithopter.html" aria-label="Open the ornithopter project"></a>
+      </article>
+      <article class="card rv rv-d2">
+        <div class="card-media"><img src="assets/img/components/bracket.png" alt="Pipe support bracket CAD model" loading="lazy"><span class="tag">DWG 03</span></div>
+        <div class="card-body">
+          <h3>Mechanical components and assemblies</h3>
+          <p>Six parts made to practice the tools. A hook, a bracket, two pipe elbows, a spacer, and a hinge that turns.</p>
+          <div class="chips"><span class="chip">Fusion 360</span><span class="chip">6 parts</span><span class="chip">Loft</span><span class="chip">Sweep</span></div>
+          <div class="card-foot"><span>Gallery · Video</span><span class="go">Open project <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h11M9 4l4 4-4 4"/></svg></span></div>
+        </div>
+        <a class="cover" href="projects/components.html" aria-label="Open the components project"></a>
+      </article>
+    </div>
+    <div class="view-next"><span class="mono">Next sheet</span><a href="#contact">Contact <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a></div>
+  </div>
+</section>
+
+<!-- ========================================================= CONTACT -->
+<section class="view section" id="contact" hidden>
+  <div class="wrap contact">
+    <div class="rv">
+      <span class="sec-num">04</span>
+      <h2 style="margin-top:14px">Get in touch</h2>
+      <p>I am open to internships and design projects. Write to me by email or find me on LinkedIn. I reply within a day or two.</p>
+      <a class="btn primary" href="mailto:gpraneesha17@gmail.com">Send an email <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+    </div>
+    <div class="contact-list rv rv-d1">
+      <a href="mailto:gpraneesha17@gmail.com"><span class="k">Email</span><span class="v">gpraneesha17@gmail.com</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      <a href="https://www.linkedin.com/in/gajadi-praneesha-06878531a/" target="_blank" rel="noopener"><span class="k">LinkedIn</span><span class="v">gajadi-praneesha</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      <a href="https://github.com/praneesha1" target="_blank" rel="noopener"><span class="k">GitHub</span><span class="v">praneesha1</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      <a href="assets/Gajadi_Praneesha_Resume.pdf" target="_blank" rel="noopener"><span class="k">Resume</span><span class="v">PDF, one page</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M2 8h11M9 4l4 4-4 4"/></svg></a>
+      <div><span class="k">Location</span><span class="v">Jodhpur · Hyderabad</span><span></span></div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer class="footer">
+  <div class="wrap footer-in">
+    <span>Drawn by Gajadi Praneesha · Rev A · <span data-year>2026</span></span>
+    <span>Models exported from Fusion 360 · Viewer built with three.js</span>
+    <button class="linkish" type="button" data-scroll-top>Back to top</button>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
+<script type="module">
+  import { CadViewer } from './assets/js/viewer.js';
+  import { ORNITHOPTER } from './assets/js/models.js';
+  const el = document.getElementById('hero-viewer');
+  el.style.position = 'absolute'; el.style.inset = '0';
+  window.cadViewer = new CadViewer(el, { model: ORNITHOPTER, ui: false, autoRotate: true, playing: true, base: './', compact: true, grid: true });
+</script>
+</body>
+</html>
